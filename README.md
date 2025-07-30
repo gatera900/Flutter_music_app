@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # flutter_music_app
 
 This is a simple music application built with Flutter. The app allows users to browse a list of songs and play their selected tracks.
@@ -78,3 +79,6 @@ This project is a starting point for a Flutter application.
 ```bash
 flutter pub get
 ```
+=======
+# Flutter_music_app
+>>>>>>> 4bb4c40a56353996d99877cb14fca939e16957c2
