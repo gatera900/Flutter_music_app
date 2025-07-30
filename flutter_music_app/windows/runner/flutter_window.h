@@ -1,33 +1,21 @@
-#ifndef RUNNER_FLUTTER_WINDOW_H_
-#define RUNNER_FLUTTER_WINDOW_H_
+# Flutter Music App
 
-#include <flutter/dart_project.h>
-#include <flutter/flutter_view_controller.h>
+A modern music player built with Flutter.
 
-#include <memory>
+## Features
+- Music playback
+- Playlist management
+- Dark theme support
+- Material Design 3
 
-#include "win32_window.h"
+## Getting Started
+1. Clone the repository
+2. Run `flutter pub get`
+3. Run `flutter run`
 
-// A window that does nothing but host a Flutter view.
-class FlutterWindow : public Win32Window {
- public:
-  // Creates a new FlutterWindow hosting a Flutter view running |project|.
-  explicit FlutterWindow(const flutter::DartProject& project);
-  virtual ~FlutterWindow();
+## Dependencies
+- Flutter SDK
+- Dart SDK
 
- protected:
-  // Win32Window:
-  bool OnCreate() override;
-  void OnDestroy() override;
-  LRESULT MessageHandler(HWND window, UINT const message, WPARAM const wparam,
-                         LPARAM const lparam) noexcept override;
-
- private:
-  // The project to run.
-  flutter::DartProject project_;
-
-  // The Flutter instance hosted by this window.
-  std::unique_ptr<flutter::FlutterViewController> flutter_controller_;
-};
-
-#endif  // RUNNER_FLUTTER_WINDOW_H_
+## License
+MIT License
